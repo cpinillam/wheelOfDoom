@@ -1,6 +1,6 @@
 {
     "autoload": {
-        "psr-4": {"app\\": "src/"}
+        "psr-4": {"app\\": "src/", "Models\\": "src/Models/"}
     },
 
     "require-dev": {
