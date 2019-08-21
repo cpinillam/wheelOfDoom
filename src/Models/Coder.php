@@ -1,2 +1,6 @@
 <?
+namespace Models;
 
+class Coder {
+
+}
