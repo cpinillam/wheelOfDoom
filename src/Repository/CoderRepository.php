@@ -8,7 +8,7 @@ class CoderRepository {
     private $conexion;
     private $server = "localhost";
     private $user = "root";
-    private $password = "root";
+    private $password = "";
     private $db = "db_wheel";
 
     function connectDB()
@@ -19,9 +19,10 @@ class CoderRepository {
         {
             $response = "No se ha podido conectar";
             echo $response;
-            return $response;
-        };
-        $response = "se ha podido conectar";
+        }
+
+        $response = "Conexion Exitosa";
+        return $response;
         echo $response;
     }
 

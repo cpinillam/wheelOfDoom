@@ -8,8 +8,9 @@ class CoderTest extends TestCase
     public function testeaSiDevuelveUnIdInt()
     {
         //Definir escenario del test
+        $coderId = 2;
         $obj = new Coder();
-        $obj->setId(2);
+        $obj->setId($coderId);
         //Ejecutar escenario del test
         $response = $obj->getId();
         //Hacemos assertion del test
@@ -20,12 +21,13 @@ class CoderTest extends TestCase
     public function testeaElNumeroDeIdCoincide()
     {
         //Definir escenario del test
+        $coderId = 2;
         $obj = new Coder();
-        $obj->setId(2);
+        $obj->setId($coderId);
         //Ejecutar escenario del test
         $response = $obj->getId();
         //Hacemos assertion del test
-        $this->assertEquals(2, $response);
+        $this->assertEquals($coderId, $response);
     }
 
     public function testeaSiElNombreEsString()
@@ -38,13 +40,14 @@ class CoderTest extends TestCase
     
     function testeaQueElNombreSeaIgualAlQueLeDiga()
     {
+        $coderName = 'laia';
         $laia = new Coder();
-        $laia->setName('laia');
+        $laia->setName($coderName);
 
 
         $nombre =  $laia -> getName();
         
-        $this-> assertEquals('laia' ,$nombre);
+        $this-> assertEquals($coderName ,$nombre);
 
     }
 }
