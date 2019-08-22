@@ -2,7 +2,8 @@
 
 namespace App\Repository;
 
-class CoderRepository {
+class CoderRepository
+{
 
     private $table = 'coders';
     private $conexion;
@@ -23,23 +24,30 @@ class CoderRepository {
 
         $response = "Conexion Exitosa";
         return $response;
-        echo $response;
     }
 
-    function selectById($id) {}
-
-    function selectAll() {
-        $query = 'select * from $this->table';
+    function selectAll()
+    {
+        $query = 'SELECT * FROM coders';
+        $respuesta = mysqli_query($this->conexion, $query);
         
-        return $response;
-    }
-    function selectByDead() {
-        $query = 'select * from $this->table Where 'dead' = 1';
+        echo $respuesta;
     }
 
+    function selectById($id)
+    {
 
+    }
 
+    function selectByDead()
+    {
+        $query = 'SELECT * 
+        FROM $this->db 
+        WHERE dead = 1';
+    }
 
-    
 }
 
+$obj = new CoderRepository();
+$obj->connectDB();
+$obj->selectAll();
