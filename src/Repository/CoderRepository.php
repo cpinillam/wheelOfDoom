@@ -25,9 +25,20 @@ class CoderRepository {
         echo $response;
     }
 
+    function selectById($id) {}
+
+    function selectAll() {
+        $query = 'select * from $this->table';
+        
+        return $response;
+    }
+    function selectByDead() {
+        $query = 'select * from $this->table Where 'dead' = 1';
+    }
+
+
+
 
     
 }
 
-$conexion = new CoderRepository();
-$conexion->connectDB(); 

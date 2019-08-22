@@ -1,5 +1,6 @@
 <?php
 namespace App\Models;
+use App\Repository;
 
 class Coder 
 {
@@ -25,6 +26,11 @@ class Coder
     function getName()
     {
         return $this->name;
+    }
+
+    function getAll() {
+        $query = new Repository();
+        $query->selectAll();
     }
 
     function __construct ($id = null, $name = "", $dead= false) {
