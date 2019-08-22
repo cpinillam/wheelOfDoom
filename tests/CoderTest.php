@@ -1,6 +1,6 @@
 <?php
 
-use app\Models\Coder;
+use App\Models\Coder;
 use PHPUnit\Framework\TestCase;
 
 class CoderTest extends TestCase
