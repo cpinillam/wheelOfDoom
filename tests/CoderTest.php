@@ -1,7 +1,6 @@
 <?php
 
-use Models\Coder;
-
+use app\Models\Coder;
 use PHPUnit\Framework\TestCase;
 
 class CoderTest extends TestCase
@@ -48,8 +47,4 @@ class CoderTest extends TestCase
         $this-> assertEquals('laia' ,$nombre);
 
     }
-
-
-    
-
 }
