@@ -4,7 +4,6 @@ namespace App\Repository;
 
 class CoderRepository
 {
-
     private $table = 'coder';
     private $conexion;
     private $server = "localhost";
@@ -31,6 +30,7 @@ class CoderRepository
 
     function selectAll()
     {
+        $this->connectDB();
         $conn = $this->conexion;
         $query = "SELECT * FROM coder";
         $respuestas = mysqli_query($conn, $query);
@@ -44,9 +44,8 @@ class CoderRepository
             "coderName" => $row['name_coder'],
             "state"=> $row['dead']
         );
-        };
-
-        echo $arrayCoders[3][coderName];
+        }
+        return $arrayCoders;
     }
 
     function selectById($id)
@@ -61,8 +60,33 @@ class CoderRepository
         WHERE dead = 1';
     }
 
+    function updateById($id)
+    {
+        $this->connectDB();
+        $conn=$this->conexion;
+        $query="UPDATE $this->table SET dead=1 WHERE id_coder='$id'";
+        $execute = mysqli_query($conn, $query);
+        return $execute;
+    }
+
+    function updateAll()
+    {
+        $this->connectDB();
+        $conn=$this->conexion;
+        $query="UPDATE $this->table SET dead=0 ";
+        $execute = mysqli_query($conn, $query);
+        return $execute;
+    }
+
 }
 
-$obj = new CoderRepository();
-$obj->connectDB();
-$obj->selectAll();
+//UPDATE table_name
+//SET column1=value, column2=value2,...
+//WHERE some_column=some_value
+
+
+//$obj = new CoderRepository();
+//$obj->connectDB();
+//$obj->selectAll();
+//$obj->updateById(4);
+//$obj->updateAll();

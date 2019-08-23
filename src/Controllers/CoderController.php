@@ -5,7 +5,7 @@ use App\Models;
 class CoderControler {
     private $id;
 
-    function random() {
+    function play() {
         
         return $id;
     }
