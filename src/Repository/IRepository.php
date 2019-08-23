@@ -18,4 +18,7 @@ Interface IRepository {
 
 
 }
-class Crud{}
+class Crud
+{
+    
+}

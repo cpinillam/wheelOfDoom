@@ -10,11 +10,13 @@ class RepositoryTest extends TestCase
     {
         //Defino el escenario del test
         $connection = new CoderRepository();
+        $msjEsperado = "Conexion Exitosa";
         //Ejecuto el escenario
         $on = $connection->connectDB();
         //Compruebo la assertion
-        $this->assertEquals("Conexion Exitosa", $on);
+        $this->assertEquals($msjEsperado, $on);
     }
+    
     
 
 }
