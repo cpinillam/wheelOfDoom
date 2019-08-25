@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repository;
+// namespace App\Repository;
 
 class CoderRepository
 {
@@ -73,7 +73,7 @@ class CoderRepository
     {
         $this->connectDB();
         $conn=$this->conexion;
-        $query="UPDATE $this->table SET dead=0 ";
+        $query="UPDATE $this->table SET dead=0";
         $execute = mysqli_query($conn, $query);
         return $execute;
     }

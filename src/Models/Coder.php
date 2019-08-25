@@ -1,7 +1,7 @@
 <?php
-namespace App\Models;
-use App\Repository\CoderRepository;
-// require_once '..\Repository\CoderRepository.php';
+// namespace App\Models;
+// use App\Repository\CoderRepository;
+require_once '..\Repository\CoderRepository.php';
 
 class Coder
 {
