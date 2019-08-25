@@ -1,7 +1,8 @@
 <?php
-// namespace App\Models;
-// use App\Repository\CoderRepository;
-require_once '..\Repository\CoderRepository.php';
+namespace App\Models;
+use App\Repository\CoderRepository;
+// require_once '..\Repository\CoderRepository.php';
+require_once '../Repository/CoderRepository.php';
 
 class Coder
 {
@@ -96,18 +97,18 @@ class Coder
     
 }
 
-$coder = new Coder();
-//$coder->getCodersAlive();
-$array = $coder->getCodersAlive();
-$coder->random();
+// $coder = new Coder();
+// //$coder->getCodersAlive();
+// $array = $coder->getCodersAlive();
+// $coder->random();
 
 
-echo 'allcoders: <br>';
+// echo 'allcoders: <br>';
 
-foreach ($array as $coder){
-    echo $coder->getName();
-    echo $coder->getStatus();
-}
+// foreach ($array as $coder){
+//     echo $coder->getName();
+//     echo $coder->getStatus();
+// }
 
 
 

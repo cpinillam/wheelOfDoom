@@ -1,6 +1,6 @@
 <?php
 
-// namespace App\Repository;
+namespace App\Repository;
 
 class CoderRepository
 {
@@ -8,7 +8,7 @@ class CoderRepository
     private $conexion;
     private $server = "localhost";
     private $user = "root";
-    private $password = "";
+    private $password = "root";
     private $db = "db_wheel";
 
     function connectDB()
@@ -20,11 +20,11 @@ class CoderRepository
         if(!$this->conexion)
         {
             $response = "No se ha podido conectar";
-            echo $response;
+            return $response;
         }
 
         $response = "Conexion Exitosa";
-        echo $response;
+        
         return $response;
     }
 

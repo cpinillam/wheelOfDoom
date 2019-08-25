@@ -4,21 +4,12 @@
 
 Interface IRepository {
     
-    function connect();
+    function connectDB();
 
-    function selectById($id);
-    
-    function selectAll($table);
-    
-    function selectByDead($dead);
+    function selectAll();
     
     function updateById($id);
 
-    function updateAll($table);
+    function updateAll();
 
-
-}
-class Crud
-{
-    
 }

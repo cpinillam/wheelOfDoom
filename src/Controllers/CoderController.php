@@ -1,27 +1,29 @@
 <?php
+namespace App\Controllers;
 
-use App\Models;
+use App\Models\Coder;
+require '../Models/Coder.php';
 
-class CoderControler {
-    private $id;
+// require_once '..\Models\Coder.php';
 
-    function play() {
-        
-        return $id;
-    }
-    
-    function kill() {
+class CoderController {
+   
 
+    public function listCoders() {
 
-
-    }
-
-    function reset() {
-
-    }
-
-    function listar() {
+        $codersInit = new Coder();
+        $coders = $codersInit->getAllCoders();
+        $codersArray = [];
+        $i=0;
+        return $coders;
+       
 
     }
+
+   
 
 }
+    // $obj = new CoderController();
+    // $coders = $obj->listCoders();
+    
+    // echo $coders[0]->getName();

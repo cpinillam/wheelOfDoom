@@ -1,7 +1,10 @@
 <?php
 
+
 use App\Models\Coder;
+// require '../src/Models/Coder.php';
 use PHPUnit\Framework\TestCase;
+
 
 class CoderTest extends TestCase
 {    
