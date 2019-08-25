@@ -1,7 +1,7 @@
 <?php
-// namespace App\Models;
-// use App\Repository\CoderRepository;
-require_once '..\Repository\CoderRepository.php';
+namespace App\Models;
+use App\Repository\CoderRepository;
+// require_once '..\Repository\CoderRepository.php';
 
 class Coder
 {
@@ -40,7 +40,7 @@ class Coder
     function getAllCoders() 
     {
         $repo = new CoderRepository();
-        $arrayCoders= $repo->selectAll();
+        $arrayCoders= $repo->selectAllCoders();
 
         foreach($arrayCoders as $coder)
         {
@@ -61,29 +61,22 @@ class Coder
             if($coder->getStatus()==0)
             {
                 array_push($this->allCodersAlive, $coder);
-               
             }
-            
-          
-            // echo $this->allCodersAlive[1];
         }
 
         return $this->allCodersAlive;
     }
 
-    function random () {
-
+    function random () 
+    {
+        $this->getCodersAlive();
         $codersAlive = $this->allCodersAlive;
         $howManyCoders="1";
         $randomCoder=array_rand($codersAlive,$howManyCoders);
 
         $selectedCoder=$codersAlive[$randomCoder];
-
         
         return $selectedCoder;
-
-       
-
     }
 
     function __construct ($id = null, $name = "", $dead = 0)
@@ -102,12 +95,12 @@ $array = $coder->getCodersAlive();
 $coder->random();
 
 
-echo 'allcoders: <br>';
+// echo 'allcoders: <br>';
 
-foreach ($array as $coder){
-    echo $coder->getName();
-    echo $coder->getStatus();
-}
+// foreach ($array as $coder){
+//     echo $coder->getName();
+//     echo $coder->getStatus();
+// }
 
 
 

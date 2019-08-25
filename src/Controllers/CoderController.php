@@ -1,27 +1,34 @@
 <?php
 
-use App\Models;
+namespace App\Controllers;
+use App\Repository\CoderRepository;
 
-class CoderControler {
+class CoderController 
+{
     private $id;
 
-    function play() {
-        
+    function play() 
+    {
         return $id;
     }
     
-    function kill() {
-
-
-
-    }
-
-    function reset() {
+    function kill() 
+    {
 
     }
 
-    function listar() {
+    function reset() 
+    {
+        $obj = new CoderRepository();
+        $updatedCoders = $obj->updateAll();
+        return $updatedCoders;
+    }
 
+    function listar() 
+    {
+        $newRepo = new CoderRepository();
+        $allCoders = $newRepo->selectAllCoders();
+        return $allCoders;
     }
 
 }

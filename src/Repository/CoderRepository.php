@@ -1,6 +1,6 @@
 <?php
 
-// namespace App\Repository;
+namespace App\Repository;
 
 class CoderRepository
 {
@@ -24,11 +24,11 @@ class CoderRepository
         }
 
         $response = "Conexion Exitosa";
-        echo $response;
+        // echo $response;
         return $response;
     }
 
-    function selectAll()
+    function selectAllCoders()
     {
         $this->connectDB();
         $conn = $this->conexion;
@@ -79,11 +79,6 @@ class CoderRepository
     }
 
 }
-
-//UPDATE table_name
-//SET column1=value, column2=value2,...
-//WHERE some_column=some_value
-
 
 //$obj = new CoderRepository();
 //$obj->connectDB();
