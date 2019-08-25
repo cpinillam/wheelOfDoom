@@ -5,7 +5,8 @@ require "../Controllers/CoderController.php";
 
 $init = new CoderController();
 $coders = $init->listCoders();
-$i=0;
+$i=1;
+$stateStyle = '';
 ?>
 
 <html><ul>
@@ -13,8 +14,10 @@ $i=0;
 <?php
 
     foreach ($coders as $coder)
-    {
-        echo '<li>' . $coder->getName() . '</li>';
+    {   
+        if ($coder->getState == 0) {$stateStyle = 'alive';};
+        echo '<li>' . $i . ' ' . $coder->getName() . ' ' . $stateStyle .'</li>';
+        $i++;
     };
     ?>
 </ul>
