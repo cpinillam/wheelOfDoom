@@ -20,106 +20,7 @@ const coders = [
          name:"CARLOS",
          dead: false
      },
-     {
-         id: 5,
-         name:"DELFINA",
-         dead: false
-     },
-     {
-         id: 6,
-         name:"ENRIC",
-         dead: false
-     },
-     {
-         id: 7,
-         name:"ERIK",
-         dead: false
-     },
-     {
-         id: 8,
-         name:"FERRAN",
-         dead: false
-     },
-     {
-         id: 9,
-         name:"FRANCO",
-         dead: false
-     },
-     {
-         id: 10,
-         name:"JANINA",
-         dead: false
-     },
-     {
-         id: 11,
-         name:"JASON",
-         dead: false
-     },
-     {
-         id: 12,
-         name:"KAVAN",
-         dead: false
-     },
-     {
-         id: 13,
-         name:"MANUELA",
-         dead: false
-     },
-     {
-         id: 14,
-         name:"NATHALIA",
-         dead: false
-     },
-     {
-         id: 15,
-         name:"NELLAY",
-         dead: false
-     },
-     {
-         id: 16,
-         name:"NOELIA",
-         dead: false
-     },
-     {
-         id: 17,
-         name:"NURIA",
-         dead: false
-     },
-     {
-         id: 18,
-         name:"RAUL",
-         dead: false
-     },
-     {
-         id: 19,
-         name:"SERGI",
-         dead: false
-     },
-     {
-         id: 20,
-         name:"SHUANGJIE",
-         dead: false
-     },
-     {
-         id: 21,
-         name:"SOLOMON",
-         dead: false
-     },
-     {
-         id: 22,
-         name:"UNAI",
-         dead: false
-     },
-     {
-         id: 23,
-         name:"ANDRES",
-         dead: false
-     },
-     {
-         id: 24,
-         name:"THIERRY",
-         dead: false
-     }
+     
  ];
   
 //General state aplication
@@ -155,34 +56,34 @@ function allCoders() {
 }
 
 //RENDER PLAYERS ARRAY IN DOM
-function printWheel() {
+// function printWheel() {
 
-    //SELECT A WHEEL DIV
-    let wheel = document.getElementById("wheel");
-    //DECLARE VARIABLES
-    let liveClass = ''
-    let html = ``;
+//     //SELECT A WHEEL DIV
+//     let wheel = document.getElementById("wheel");
+//     //DECLARE VARIABLES
+//     let liveClass = ''
+//     let html = ``;
 
-    //PLAYER ARRAY ITERATE
-    for (let i = 0; i < players.length; i++) {
+//     //PLAYER ARRAY ITERATE
+//     for (let i = 0; i < players.length; i++) {
 
-        //DECIDE THE CLASS WILL ADD
-        if (players[i].dead === false) {
-            liveClass = 'alive';
-        }
-        if (players[i].dead === true) {
-            liveClass = 'dead';
-        }
-        //ADD HTML IN VARIABLE ITERATION
-        html += `
-            <li class="player ${liveClass}" id='player${players[i].id}'>
-                ${players[i].name}
-            </li>`;
+//         //DECIDE THE CLASS WILL ADD
+//         if (players[i].dead === false) {
+//             liveClass = 'alive';
+//         }
+//         if (players[i].dead === true) {
+//             liveClass = 'dead';
+//         }
+//         //ADD HTML IN VARIABLE ITERATION
+//         html += `
+//             <li class="player ${liveClass}" id='player${players[i].id}'>
+//                 ${players[i].name}
+//             </li>`;
         
-    }
-    //ON ITERATION FINISH INJECT HTML
-    wheel.innerHTML = html;
-}
+//     }
+//     //ON ITERATION FINISH INJECT HTML
+//     wheel.innerHTML = html;
+// }
 
 //THE RUN PLAY FUNCTION
 function play() {

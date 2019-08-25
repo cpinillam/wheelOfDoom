@@ -64,9 +64,6 @@ class Coder
                 array_push($this->allCodersAlive, $coder);
                
             }
-            
-          
-            // echo $this->allCodersAlive[1];
         }
 
         return $this->allCodersAlive;
@@ -79,12 +76,17 @@ class Coder
         $randomCoder=array_rand($codersAlive,$howManyCoders);
 
         $selectedCoder=$codersAlive[$randomCoder];
-
         
+        $update = new CoderRepository();
+        $update->updateById($selectedCoder->getId());    
+
         return $selectedCoder;
 
-       
+    }
 
+    function reset() {
+        $resetAll = new CoderRepository();
+        $resetAll->updateAll();
     }
 
     function __construct ($id = null, $name = "", $dead = 0)

@@ -20,10 +20,41 @@ class CoderController {
 
     }
 
-   
+    public function kill(){
+        $dead = new coder();
+
+        $deadCoder = $dead->getCodersAlive();
+        $deadCoder = $dead->random();
+        $this->view();
+        return $deadCoder->getName();
+        
+    }
+
+    public function reset(){
+        $init= new Coder();
+        $init->reset();
+        $this->view();
+        
+    }
+
+    function view(){
+        header('Location:../Views/CoderView.php');
+    }
 
 }
-    // $obj = new CoderController();
-    // $coders = $obj->listCoders();
+
+if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['kill']))
+    {
+        $dead = new CoderController();
+        $dead->kill();
+      
+
+    };
+if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['reset']))
+    {
+        $dead = new CoderController();
+        $dead->reset();
+      
+
+    };
     
-    // echo $coders[0]->getName();
