@@ -21,8 +21,8 @@ class CoderController {
     }
 
     public function kill(){
-        $dead = new coder();
 
+        $dead = new coder();
         $deadCoder = $dead->getCodersAlive();
         $deadCoder = $dead->random();
         $this->view();
@@ -31,10 +31,11 @@ class CoderController {
     }
 
     public function reset(){
+        
         $init= new Coder();
         $init->reset();
         $this->view();
-        
+
     }
 
     function view(){
