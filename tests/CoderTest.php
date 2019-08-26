@@ -114,7 +114,7 @@ class CoderTest extends TestCase
         $this->assertEquals($coderVivo, $estado);
     }
 
-    function testSiCoderSeleccionadoTieneNombreString()
+    function testSiCoderSeleccionadoTieneNombre()
     {
         //Defino el escenario del test
         $coder = new Coder();
