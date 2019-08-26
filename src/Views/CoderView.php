@@ -1,7 +1,7 @@
 <?php
 namespace App\Views;
 use App\Controllers\CoderController; 
-require "../Controllers/CoderController.php";
+// require "../Controllers/CoderController.php";
 
 $init = new CoderController();
 $coders = $init->listCoders();

@@ -1,23 +1,20 @@
 <?php
 
-
-use App\Controllers\CoderController as Controller;
-
-// require '../src/Controllers/CoderController.php';
-
+use App\Models\Coder;
+use App\Controllers\CoderController;
 use PHPUnit\Framework\TestCase;
-
-
-class CoderControllerTest extends TestCase
-{    
-    public function testSiDevuelveUnIdInt()
+class ControllerTest extends TestCase
+{
+   
+    function testSiFunctionListarDevuelveUnArray()
     {
-        $init = new Controller();
-        $name = $init->listCoders();
-
-        $this->assertEquals('Sergi', $name);
-
+        //Definir escenario del test
+        $coders = new coderController();
+        $lista = $coders->listCoders();
+        
+        //Ejecutar escenario del test
+        
+        //Compruebo assertion del test
+        $this->assertIsArray($lista);
     }
-
-    
-};
+}

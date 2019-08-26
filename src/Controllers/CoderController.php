@@ -2,7 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\Coder;
-require '../Models/Coder.php';
+// require '../Models/Coder.php';
 
 // require_once '..\Models\Coder.php';
 
@@ -35,6 +35,7 @@ class CoderController {
         $init= new Coder();
         $init->reset();
         $this->view();
+        return true;
 
     }
 
@@ -44,18 +45,18 @@ class CoderController {
 
 }
 
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['kill']))
-    {
-        $dead = new CoderController();
-        $dead->kill();
+// if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['kill']))
+//     {
+//         $dead = new CoderController();
+//         $dead->kill();
       
 
-    };
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['reset']))
-    {
-        $dead = new CoderController();
-        $dead->reset();
+//     };
+// if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['reset']))
+//     {
+//         $dead = new CoderController();
+//         $dead->reset();
       
 
-    };
+//     };
     
